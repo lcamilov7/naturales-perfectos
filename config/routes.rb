@@ -8,6 +8,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   resources :intervals, only: %i[new create]
   root "intervals#new"
-  get "/home", to: "intervals#home"
-  delete "/again", to: "intervals#again"
+  get "/result", to: "intervals#result"
+  get "/again", to: "intervals#again"
 end

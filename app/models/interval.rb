@@ -1,5 +1,5 @@
 class Interval < ApplicationRecord
-  validates :minimum, presence: true
+  validates :minimum, :maximum, presence: true
   validates :minimum, format: { without: /[.,]/, message: "no puede contener comas ni puntos" }
   validates :minimum, numericality: { greater_than: 0, message: "debe ser mayor que 0" }
   validates :maximum, numericality: { greater_than: :minimum, message: "debe ser mayor que minimum" }
