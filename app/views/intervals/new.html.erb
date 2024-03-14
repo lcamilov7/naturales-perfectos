@@ -1,5 +1,7 @@
-<%= simple_form_for @interval do |f|%>
-  <%= f.input :minimum %>
-  <%= f.input :maximum %>
-  <%= f.submit %>
-<% end %>
+<div class="container w-50 text-center">
+  <%= simple_form_for @interval do |f|%>
+    <%= f.input :minimum, label: "Mínimo"%>
+    <%= f.input :maximum, label: "Máximo" %>
+    <%= f.submit "Cacular", class: "btn btn-primary"%>
+  <% end %>
+</div>
