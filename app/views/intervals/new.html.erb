@@ -1,7 +1,7 @@
 <div class="container w-75 text-center">
   <%= simple_form_for @interval do |f|%>
-    <%= f.input :minimum, label: "Mínimo"%>
-    <%= f.input :maximum, label: "Máximo" %>
+    <%= f.input :minimum, label: "Mínimo", input_html: { style: "background: rgba(255,255,255,0.3); color: white;" }%>
+    <%= f.input :maximum, label: "Máximo", input_html: { style: "background: rgba(255,255,255,0.3); color: white;" } %>
     <%= f.submit "Calcular", class: "btn btn-primary"%>
   <% end %>
 </div>

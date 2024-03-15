@@ -1,5 +1,5 @@
 <div class="container w-75 text-center">
-  <h6>Los numeros naturales reales que hay en el rango del <%= @interval.minimum %> al <%= @interval.maximum %> son <%= @naturales.length %> y son:</h2>
+  <h6>Los numeros naturales perfectos que hay en el rango del <%= @interval.minimum %> al <%= @interval.maximum %> son <%= @naturales.length %> y son:</h2>
   <ul class="list-unstyled">
     <% @naturales.each do |numero| %>
       <li><%= numero %></li>
