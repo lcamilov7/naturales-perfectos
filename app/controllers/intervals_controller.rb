@@ -20,7 +20,6 @@ class IntervalsController < ApplicationController
 
   def result
     @interval = Interval.last
-    @naturales = @interval.determinar_naturales
   end
 
   def again
