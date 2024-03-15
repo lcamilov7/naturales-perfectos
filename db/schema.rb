@@ -15,8 +15,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_14_181805) do
   enable_extension "plpgsql"
 
   create_table "intervals", force: :cascade do |t|
-    t.integer "minimum"
-    t.integer "maximum"
+    t.integer "maximum", null: false
+    t.integer "minimum", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
