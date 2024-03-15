@@ -5,10 +5,16 @@ class IntervalsController < ApplicationController
 
   def create
     @interval = Interval.new(interval_params)
-    if @interval.save
-      redirect_to result_path
-    else
-      render :new, status: :unprocessable_entity
+
+    respond_to do |format|
+      if @interval.save
+        format.html { redirect_to result_path }
+        format.json { render :result, status: :created, location: @interval }
+      else
+        puts @interval.errors.full_messages
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @interval.errors, status: :unprocessable_entity }
+      end
     end
   end
 
@@ -19,7 +25,11 @@ class IntervalsController < ApplicationController
 
   def again
     Interval.destroy_all
-    redirect_to new_interval_path
+
+    respond_to do |format|
+      format.html { redirect_to new_interval_path }
+      format.json { head :no_content }
+    end
   end
 
   private
