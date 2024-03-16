@@ -1,4 +1,5 @@
 class IntervalsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   def new
     @interval = Interval.new
   end
@@ -9,7 +10,7 @@ class IntervalsController < ApplicationController
     respond_to do |format|
       if @interval.save
         format.html { redirect_to result_path }
-        format.json { render :result, status: :created, location: @interval }
+        format.json { render json: @interval.to_json(only: %i[minimum maximum results]), status: 200 }
       else
         puts @interval.errors.full_messages
         format.html { render :new, status: :unprocessable_entity }
