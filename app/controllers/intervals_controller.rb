@@ -6,7 +6,6 @@ class IntervalsController < ApplicationController
 
   def create
     @interval = Interval.new(interval_params)
-
     respond_to do |format|
       if @interval.save
         format.html { redirect_to result_path }
@@ -24,7 +23,7 @@ class IntervalsController < ApplicationController
   end
 
   def again
-    Interval.destroy_all
+    # Interval.destroy_all
 
     respond_to do |format|
       format.html { redirect_to new_interval_path }
