@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Defines the root path route ("/")
+  # Etablecemos las rutas clasicas para el controlador intervals new y create
   resources :intervals, only: %i[new create]
+  # Establecemos nuestra nuta '/' como la vista del new
   root "intervals#new"
+  # Creamos una ruta para mostrar los resultados, tambien podia haber sido un show
   get "/result", to: "intervals#result"
+  # Creamos una ruta que es invocada y responde el método again de intervals
+  # controller y funciona para volver a probar la calculadora
   get "/again", to: "intervals#again"
 end
