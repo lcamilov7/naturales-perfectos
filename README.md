@@ -10,10 +10,15 @@ Ya que son las letras del abecedario desde la d hasta la r, agrupadas por 3 unid
 2.b) OFN:
 Cada letra del grupo de 3 letras va convirtiéndose en su siguiente letra en orden alfabético en el siguiente grupo de 3 letras, por ende, pude deducir la respuesta.
 3.c) 139:
-Podemos calcular la siguiente cifra así:                                                                                           cifra = cifra_anterior + (5 + i)                                                                                          Donde i comienza valiendo 0 y partimos del número 104, ósea, el siguiente de 104 es: cifra = 104 + (5 + 0)                                                                                                                                          lo que da 109, para la siguiente cifra es igual pero i va sumando de a 1 cada vez, lo que da 115 y así sucesivamente hasta llegar a 139 que era la cifra que venía al orden.
+Podemos calcular la siguiente cifra así:
+cifra = cifra_anterior + (5 + i)                                                                                      Donde i comienza valiendo 0 y partimos del número 104, ósea, el siguiente de 104 es:
+cifra = 104 + (5 + 0)
+lo que da 109, para la siguiente cifra es igual pero i va sumando de a 1 cada vez, lo que da 115 y así sucesivamente hasta llegar a 139 que era la cifra que venía al orden.
 
 4.c) 511:
-Aquí la siguiente cifra se puede calcular así:                                                                             cifra = (cifra_anterior * 2) + 1                                                                                                                                      Lo que me permitió hallar el 511 que era la cifra que seguía porque 511 es:                cifra = (255 * 2) + 1
+Aquí la siguiente cifra se puede calcular así:                                                                             cifra = (cifra_anterior * 2) + 1
+Lo que me permitió hallar el 511 que era la cifra que seguía porque 511 es:
+cifra = (255 * 2) + 1
 
 ARBOL GENEALÓGICO
 B) 1 y 3:
@@ -41,4 +46,5 @@ Para hacer una petición que devuelva el json anteriormente mencionado podemos u
 2.	Ingresamos la URL http://localhost:3000/intervals.json
 3.	En el body de la petición establecemos el tipo JSON y en el campo raw pasamos los atributos minimum y maximum en formato json.
 
-Nota importante: Fue un desafío interesante en el que pude practicar tanto mi lógica como programador como mi capacidad para construir una aplicación que resuelva los requerimientos solicitados en un periodo corto de tiempo, decidí realizarla en el medio que más confianza y práctica tengo que es el desarrollo web con el framework Ruby on Rails, aunque también tengo práctica y actualmente profundizo en Python, pero estoy dispuesto a aprender nuevos lenguajes y frameworks de desarrollo de aplicaciones utilizando las mejores prácticas y patrones de diseño, que puedan ser desafiantes y me hagan crecer como profesional que aborda variedad de tecnologías.
+
+Nota importante: Fue un desafío interesante en el que pude practicar tanto mi lógica como programador como mi capacidad para construir una aplicación que resuelva los requerimientos solicitados en un periodo corto de tiempo de dos días, decidí realizarla en el medio que más confianza y práctica tengo que es el desarrollo web con el framework Ruby on Rails, aunque también tengo práctica y actualmente profundizo en Python, pero estoy dispuesto a aprender nuevos lenguajes y frameworks de desarrollo de aplicaciones utilizando las mejores prácticas y patrones de diseño, que puedan ser desafiantes y me hagan crecer como profesional que aborda variedad de tecnologías.
