@@ -53,3 +53,4 @@ class IntervalsController < ApplicationController
     params.require(:interval).permit(:minimum, :maximum)
   end
 end
+## NT-2
